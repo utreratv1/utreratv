@@ -1,0 +1,16 @@
+{
+  "name": "Utrera TV en Directo",
+  "short_name": "Utrera TV",
+  "start_url": "index.html",
+  "display": "any",
+  "orientation": "landscape",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
