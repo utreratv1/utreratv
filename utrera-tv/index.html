@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Utrera TV — emisión en directo">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Utrera TV">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <title>Utrera TV</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      width: 100%; height: 100%; margin: 0; padding: 0;
+      overflow: hidden; background: #000;
+    }
+    body { position: fixed; inset: 0; }
+    iframe {
+      display: block; width: 100vw; height: 100vh;
+      width: 100dvw; height: 100dvh;
+      border: 0; margin: 0; padding: 0; background: #000;
+    }
+  </style>
+</head>
+<body>
+  <iframe
+    src="https://vdo.ninja/?view=ZdffDQr&cleanoutput&autostart&noheader"
+    title="Utrera TV en directo"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen
+    referrerpolicy="strict-origin-when-cross-origin">
+  </iframe>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js").catch(console.error);
+      });
+    }
+  </script>
+</body>
+</html>
